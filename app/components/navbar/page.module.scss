@@ -1,0 +1,45 @@
+.header{
+display: flex;
+// justify-content: space-between;
+    align-items: center;
+    background-color: #161a1d;
+    padding: 0 20px;
+    color: #edf2f4;
+
+.logo {
+    flex: 20;
+}
+
+.login{
+    flex: 20;
+}
+.navigation {
+    flex: 80;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.navigation ul li:hover{
+    color: rgb(229, 56, 59);
+}
+
+.navigation ul li:last-child {
+    margin-right: 0;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+ 
+    font-weight: bold;
+}
+}

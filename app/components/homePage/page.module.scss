@@ -1,0 +1,44 @@
+.carousel {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.imageContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.topLeft {
+  position: absolute;
+  font-size: 1.5rem;
+  margin-left: 10%;
+  height: 30%;
+  width: 50%;
+}
+
+.image {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  background-color: #d3d3d3;
+}
+.slide{
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  background-color: #d3d3d3;
+}

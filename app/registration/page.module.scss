@@ -1,0 +1,47 @@
+.registration {
+
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+  .btn {
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: #ef233c;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  .btn:hover {
+  }
+
+  @-webkit-keyframes move {
+    from {
+      transform: translate(-100px, -50px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+
+    to {
+      transform: translate(500px, 100px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+
+  @keyframes move {
+    from {
+      transform: translate(-100px, -50px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+
+    to {
+      transform: translate(500px, 100px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+}
