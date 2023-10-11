@@ -15,7 +15,7 @@ const ContentPage = () => {
       <p className={styles.para}>
         {" "}
         At One Life, we are dedicated to helping you achieve your fitness goals
-        and lead a healthier, happier life. Whether you're looking to lose
+        and lead a healthier, happier life. Whether you re looking to lose
         weight, build muscle, or simply improve your overall well-being, our
         state-of-the-art gym facilities and expert trainers are here to support
         you every step of the way.
