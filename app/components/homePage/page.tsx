@@ -49,11 +49,11 @@ const HomePage = () => {
           src={pushUpsMan}
           alt="Picture of the pushUpsMan"
         />
-        <Image
+        {/* <Image
           className={styles.slide}
           src={arnold}
           alt="Picture of the sportman"
-        />
+        /> */}
       </div>
     </div>
   );
