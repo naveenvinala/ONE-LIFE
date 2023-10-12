@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "./Content.module.scss";
 import { inter } from "../../utils/fonts";
 const ContentPage = () => {
   return (

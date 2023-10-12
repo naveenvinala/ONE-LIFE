@@ -1,5 +1,5 @@
 import React, { Children } from "react";
-import styles from "./page.module.scss";
+import styles from "./center.module.scss";
 
 type CenterProps = {
   children: React.ReactNode;

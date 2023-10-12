@@ -7,8 +7,8 @@ import female from "@/public/photos/female.jpeg";
 import fitnessman from "@/public/photos/fitnessman.jpeg";
 import pushUpsMan from "@/public/photos/pushUpsMan.jpeg";
 import sportman from "@/public/photos/sportman.png";
-import Content from "../content/page";
-import Button from "../button/page";
+import Content from "../Content/Content";
+import Button from "../Button/Button";
 const HomePage = () => {
   return (
     <div className={styles.imageCarousel}>

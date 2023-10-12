@@ -4,9 +4,9 @@ import styles from "./page.module.scss";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 // import TextField from "@mui/material/TextField";
-import Card from "app/components/card/page";
-import Center from "app/components/center/page";
-import TextField from "app/components/Inputs/TextField/page";
+import Card from "app/components/Card/Card";
+import Center from "app/components/Center/Center";
+import TextField from "app/components/Inputs/TextField/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -35,18 +35,20 @@ const RegistrationPage = () => {
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
   };
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      console.log(formInputs)
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(formInputs);
 
-      alert(`${formInputs.firstName} ${formInputs.phoneNumber} selected plan : ${selectedValue} `);
-    };
-
+    alert(
+      `${formInputs.firstName} ${formInputs.phoneNumber} selected plan : ${selectedValue} `
+    );
+  };
 
   return (
     <div className={styles.registration}>
       <Center>
-        <Card title="One Life Registration Page">
+        <Card>
+          <h1 className={styles.title}> One Life Registration Page </h1>
           <form onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div className={styles.column}>

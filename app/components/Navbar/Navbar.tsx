@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./page.module.scss";
+import styles from "./navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import onelife from "../../../public/photos/onelife.png";
+import onelife from "@/public/photos/onelife.png";
 
-const page = () => {
+const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -13,10 +13,14 @@ const page = () => {
       <div className={styles.navigation}>
         <ul>
           <li>
-            <Link href="/">Home </Link>
+            <Link className={styles.active} href="/">
+              Home{" "}
+            </Link>
           </li>
           <li>
-            <Link href="/registration">Registration </Link>
+            <Link className={styles.active} href="/registration">
+              Registration{" "}
+            </Link>
           </li>
           <li>
             <Link href="/Photos"> Photos </Link>
@@ -31,4 +35,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Navbar;

@@ -15,20 +15,7 @@
     background-color: #fff;
     color:black;
 }
-.title {
-    padding-bottom: 0.5rem ;
-    font-size: 2rem;
-    padding:2rem;
-    color:#EF233C;
-    display: grid;
-    justify-content: center;
- 
-  }
-  .subtitle {
-    padding: 10px;
-    font-size: 1.2rem;
-    color: #2B2D42;
-  }
+
 
   @media (320px <= width <= 768px) {
     .card {

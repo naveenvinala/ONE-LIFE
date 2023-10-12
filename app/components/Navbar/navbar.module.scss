@@ -25,6 +25,9 @@ display: flex;
     margin: 0;
 }
 
+li :hover:not(.active) {
+    background-color: #111;
+  }
 .navigation ul li {
     display: inline;
     margin-right: 20px;

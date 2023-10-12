@@ -18,7 +18,22 @@
     border-radius: 2rem;
     cursor: pointer;
   }
-  .btn:hover {
+  // .btn:hover {
+  // }
+
+  .title {
+    padding-bottom: 0.5rem ;
+    font-size: 2rem;
+    padding:2rem;
+    color:#EF233C;
+    display: grid;
+    justify-content: center;
+ 
+  }
+  .subtitle {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #2B2D42;
   }
 
   @-webkit-keyframes move {
