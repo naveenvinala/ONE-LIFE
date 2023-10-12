@@ -18,7 +18,10 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import dayjs from "dayjs";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+// import Pattern from "@/public/photos/pattern.svg";
+import female from "@/public/photos/female.jpeg";
 
+import Image from "next/image";
 const RegistrationPage = () => {
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -51,41 +54,47 @@ const RegistrationPage = () => {
   return (
     <Card>
       <div className={styles.registration}>
-        <h1> Registration Page </h1>
-        <div className={styles.row}>
-          <div className={styles.column}>
-            <TextField
-              name="firstName"
-              type="text"
-              onChange={handleInputChange}
-            />
-            <TextField
-              name="lastName"
-              type="text"
-              onChange={handleInputChange}
-            />
-          </div>
+        <div className={styles.pattern}>
+          <Image className={styles.image} src={female} alt="pattern" />
         </div>
-        <div className={styles.row}>
-          <div className={styles.column}>
-            <TextField
-              name="phoneNumber"
-              type="number"
-              onChange={handleInputChange}
-            />
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer
-                components={["MobileDatePicker", "", "DatePicker"]}
-              >
-                <DemoItem label="Mobile variant">
-                  <MobileDatePicker defaultValue={dayjs("2022-04-17")} />
-                </DemoItem>
-              </DemoContainer>
-            </LocalizationProvider>
-          </div>
-        </div>
+        <div className={styles.registerForm}>
+          <h1> Registration Page </h1>
+          <div className={styles.inputs}>
+          
+              <TextField  
+                name="firstName"
+                type="text"
+                onChange={handleInputChange}
+              />
+           
+              <TextField
+                name="lastName"
+                type="text"
+                onChange={handleInputChange}
+              />
+           
+          
+           
+              <TextField
+                name="phoneNumber"
+                type="number"
+                onChange={handleInputChange}
+              />
+           
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer
+                  components={["MobileDatePicker", "", "DatePicker"]}
+                >
+                  <DemoItem label="Mobile variant">
+                    <MobileDatePicker defaultValue={dayjs("2022-04-17")} />
+                  </DemoItem>
+                </DemoContainer>
+              </LocalizationProvider>
+           
 
-        <button type="submit"> Submit</button>
+          <button type="submit"> Submit</button>
+        </div>
+      </div>
       </div>
     </Card>
   );

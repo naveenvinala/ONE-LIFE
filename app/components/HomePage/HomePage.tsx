@@ -9,6 +9,7 @@ import pushUpsMan from "@/public/photos/pushUpsMan.jpeg";
 import sportman from "@/public/photos/sportman.png";
 import Content from "../Content/Content";
 import Button from "../Button/Button";
+import Pattern from "@/public/photos/pattern.svg";
 const HomePage = () => {
   return (
     <div className={styles.imageCarousel}>
@@ -24,6 +25,19 @@ const HomePage = () => {
             <Button />
           </div>
         </div>
+        <div className={styles.container}>
+          <Image
+            className={styles.patternImage}
+            src={Pattern}
+            alt="Picture of the Pattern"
+          />
+          <div className={styles.center}>
+            <div className={styles.polaroid}>
+              <h3> Sample text. Click to select the Text Element.</h3>
+            </div>
+          </div>
+        </div>
+
         <Image
           className={styles.slide}
           src={female}
@@ -49,7 +63,6 @@ const HomePage = () => {
           src={pushUpsMan}
           alt="Picture of the pushUpsMan"
         />
-       
       </div>
     </div>
   );

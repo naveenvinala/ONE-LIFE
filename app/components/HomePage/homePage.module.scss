@@ -1,3 +1,25 @@
+.container {
+  position: relative;
+  display: flex;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+.polaroid {
+  width: 40%;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+.patternImage{
+  width: 100%;
+  height: auto;
+
+}
 .carousel {
   position: relative;
   display: flex;
@@ -31,13 +53,13 @@
   object-fit: cover;
   background-color: #d3d3d3;
 }
-.slide{
-  width: 100vw;
-  height: 100%;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: contain;
-  object-fit: cover;
-  background-color: #d3d3d3;
-}
+// .slide{
+//   // width: 100vw;
+//   // height: 100%;
+//   position: relative;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   object-fit: cover;
+//   background-color: #d3d3d3;
+// }
