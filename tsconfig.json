@@ -25,20 +25,15 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/public/*": [
-        "public/*"
-      ]
+        "@/public/*": ["public/*"],
+        "@/components/*": ["app/components/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "app/components/Card/Card.jsx"  ],
+    ".next/types/**/*.ts"],
   "exclude": [
     "node_modules"
   ]
