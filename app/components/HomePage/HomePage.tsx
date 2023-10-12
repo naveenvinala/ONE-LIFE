@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./page.module.scss";
+import styles from "./homePage.module.scss";
 import arnold from "@/public/photos/arnold.jpeg";
 import athelte from "@/public/photos/athelte.jpeg";
 import female from "@/public/photos/female.jpeg";
@@ -49,11 +49,7 @@ const HomePage = () => {
           src={pushUpsMan}
           alt="Picture of the pushUpsMan"
         />
-        {/* <Image
-          className={styles.slide}
-          src={arnold}
-          alt="Picture of the sportman"
-        /> */}
+       
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.scss";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 // import TextField from "@mui/material/TextField";
 import Card from "app/components/Card/Card";
@@ -15,6 +14,9 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
+import Grid from "@mui/material/Grid";
+
+// import Button from '@/components/Button/Button';
 
 const RegistrationPage = () => {
   const [selectedValue, setSelectedValue] = React.useState("");
@@ -48,79 +50,70 @@ const RegistrationPage = () => {
     <div className={styles.registration}>
       <Center>
         <Card>
-          <h1 className={styles.title}> One Life Registration Page </h1>
           <form onSubmit={handleSubmit}>
-            <div className={styles.row}>
-              <div className={styles.column}>
+            <h1 className={styles.title}> One Life Registration Page </h1>
+            <FormControl>
+              <Grid item xs={8}>
                 <TextField
                   name="firstName"
                   type="text"
                   onChange={handleInputChange}
                 />
-              </div>
-              <div className={styles.column}>
+              </Grid>
+              <Grid item xs={4}>
                 <TextField
                   name="lastName"
                   type="text"
                   onChange={handleInputChange}
                 />
-              </div>
-              <div className={styles.column}>
+              </Grid>
+
+              <Grid item xs={4}>
                 <TextField
                   name="phoneNumber"
                   type="number"
                   onChange={handleInputChange}
                 />
-              </div>
-            </div>
-
-            <div className={styles.row}>
-              <div className={styles.column}>
-                <FormControl>
-                  <FormLabel id="demo-radio-buttons-group-label">
-                    Plans
-                  </FormLabel>
-                  <RadioGroup
-                    row
-                    color="success"
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="monthly"
-                    name="radio-buttons-group"
-                    value={selectedValue}
-                    onChange={handleRadioChange}
-                  >
-                    <FormControlLabel
-                      value="monthly"
-                      control={<Radio color="error" />}
-                      label="Monthly"
-                    />
-                    <FormControlLabel
-                      value="halfYearly"
-                      control={<Radio color="error" />}
-                      label="Half Yearly"
-                    />
-                    <FormControlLabel
-                      value="quarterly"
-                      control={<Radio color="error" />}
-                      label="Quarterly"
-                    />
-                    <FormControlLabel
-                      value="Annually"
-                      control={<Radio color="error" />}
-                      label="Annual"
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </div>
-            </div>
-            <Button
-              className={styles.btn}
-              type="submit"
-              variant="outlined"
-              color="error"
-            >
-              Get Started
-            </Button>
+              </Grid>
+              <Grid item xs={8}>
+                <TextField
+                  name="phoneNumber"
+                  type="number"
+                  onChange={handleInputChange}
+                />
+              </Grid>
+            </FormControl>
+            <FormControl>
+              <FormLabel id="demo-radio-buttons-group-label">Plans</FormLabel>
+              <RadioGroup
+                row
+                defaultValue="monthly"
+                name="radio-buttons-group"
+                value={selectedValue}
+                onChange={handleRadioChange}
+              >
+                <FormControlLabel
+                  value="monthly"
+                  control={<Radio color="error" />}
+                  label="Monthly"
+                />
+                <FormControlLabel
+                  value="halfYearly"
+                  control={<Radio color="error" />}
+                  label="Half Yearly"
+                />
+                <FormControlLabel
+                  value="quarterly"
+                  control={<Radio color="error" />}
+                  label="Quarterly"
+                />
+                <FormControlLabel
+                  value="Annually"
+                  control={<Radio color="error" />}
+                  label="Annual"
+                />
+              </RadioGroup>
+            </FormControl>
           </form>
         </Card>
       </Center>
