@@ -25,39 +25,16 @@ const HomePage = () => {
             <Button />
           </div>
         </div>
-        <div className={styles.container}>
-          <Image
-            className={styles.patternImage}
-            src={Pattern}
-            alt="Picture of the Pattern"
-          />
-          <div className={styles.center}>
-            <div className={styles.polaroid}>
-              <h3> Sample text. Click to select the Text Element.</h3>
-            </div>
-          </div>
-        </div>
-
         <Image
           className={styles.slide}
           src={female}
           alt="Picture of the female"
         />
-        <Image
-          className={styles.slide}
-          src={sportman}
-          alt="Picture of the sportman"
-        />
-
-        <div className={styles.container}>
           <Image
             className={styles.slide}
             src={athelte}
             alt="Picture of the athelte"
           />
-          <div className={styles.topLeft}>topLeft</div>
-        </div>
-
         <Image
           className={styles.slide}
           src={pushUpsMan}

@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./content.module.scss";
 import { inter } from "../../utils/fonts";
+import 'animate.css';
+
+
 const ContentPage = () => {
   return (
     <div className={styles.content}>
@@ -8,8 +11,8 @@ const ContentPage = () => {
         Welcome to <span> One Life </span>
       </h1>
       
-      <h4 className={styles.subTitle}>
-        {" "}
+      <h4 className={`${styles.subTitle}`}>
+  
         <span> Fitness Club</span> – Your Ultimate Fitness Destination!
       </h4>
       <p className={styles.para}>

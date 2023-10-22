@@ -1,6 +1,7 @@
 .container {
   position: relative;
   display: flex;
+  width: 100%;
 }
 .center {
   position: absolute;
@@ -53,13 +54,3 @@
   object-fit: cover;
   background-color: #d3d3d3;
 }
-// .slide{
-//   // width: 100vw;
-//   // height: 100%;
-//   position: relative;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   object-fit: cover;
-//   background-color: #d3d3d3;
-// }

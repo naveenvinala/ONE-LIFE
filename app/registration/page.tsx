@@ -54,33 +54,31 @@ const RegistrationPage = () => {
   return (
     <Card>
       <div className={styles.registration}>
-        <div className={styles.pattern}>
-          <Image className={styles.image} src={female} alt="pattern" />
-        </div>
+        <h1> Registration Page </h1>
         <div className={styles.registerForm}>
-          <h1> Registration Page </h1>
-          <div className={styles.inputs}>
-          
-              <TextField  
+          <div className={styles.fields}>
+            <div className={styles.inputBox}>
+              <TextField
                 name="firstName"
                 type="text"
                 onChange={handleInputChange}
               />
-           
+            </div>
+            <div className={styles.inputBox}>
               <TextField
                 name="lastName"
                 type="text"
                 onChange={handleInputChange}
               />
-           
-          
-           
+            </div>
+            <div className={styles.inputBox}>
               <TextField
                 name="phoneNumber"
                 type="number"
                 onChange={handleInputChange}
               />
-           
+            </div>
+            <div className={styles.inputBox}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer
                   components={["MobileDatePicker", "", "DatePicker"]}
@@ -90,11 +88,10 @@ const RegistrationPage = () => {
                   </DemoItem>
                 </DemoContainer>
               </LocalizationProvider>
-           
-
+            </div>
+          </div>
           <button type="submit"> Submit</button>
         </div>
-      </div>
       </div>
     </Card>
   );

@@ -6,7 +6,7 @@ import onelife from "@/public/photos/onelife.png";
 
 const Navbar = () => {
   return (
-    <header className={styles.header}>
+    <nav className={styles.nav}>
       <div className={styles.logo}>
         <Image src={onelife} alt="Logo" height={80} width={80} />
       </div>
@@ -14,12 +14,12 @@ const Navbar = () => {
         <ul>
           <li>
             <Link className={styles.active} href="/">
-              Home{" "}
+              Home
             </Link>
           </li>
           <li>
             <Link className={styles.active} href="/registration">
-              Registration{" "}
+              Registration
             </Link>
           </li>
           <li>
@@ -31,7 +31,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className={styles.login}>login</div>
-    </header>
+    </nav>
   );
 };
 
