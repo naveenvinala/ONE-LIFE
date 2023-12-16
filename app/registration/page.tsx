@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.scss";
-import Box from "@mui/material/Box";
 import Card from "app/components/Card/Card";
-import TextField from "@/components/Inputs/TextField/TextField";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
+import TextField from "@/components/Inputs/InputField/InputField";
+
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Radio from "@mui/material/Radio";
@@ -13,17 +11,20 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid";
-import { LocalizationProvider } from "@mui/x-date-pickers";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
-import dayjs from "dayjs";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
-// import Pattern from "@/public/photos/pattern.svg";
-import female from "@/public/photos/female.jpeg";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import dayjs, { Dayjs } from "dayjs";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 import Image from "next/image";
 const RegistrationPage = () => {
   const [selectedValue, setSelectedValue] = useState("");
+  //const date = new Date();
+  const [value, setValue] = useState();
+  console.log(value);
 
   const [formInputs, setFormInputs] = useState({
     firstName: "",
@@ -31,7 +32,7 @@ const RegistrationPage = () => {
     phoneNumber: "",
   });
 
-  const handleInputChange = (event: SelectChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormInputs({
       ...formInputs,
       [event.target.name]: event.target.value,
@@ -52,48 +53,96 @@ const RegistrationPage = () => {
   };
 
   return (
-    <Card>
-      <div className={styles.registration}>
-        <h1> Registration Page </h1>
-        <div className={styles.registerForm}>
-          <div className={styles.fields}>
-            <div className={styles.inputBox}>
-              <TextField
-                name="firstName"
-                type="text"
-                onChange={handleInputChange}
-              />
+    <div className={styles.registration}>
+      <Card>
+        <div className={styles.container}>
+          <h1> Register For Free </h1>
+        
+          <div className={styles.registerForm}>
+            <div className={styles.fields}>
+            <div className={styles.formgroup}>
+
+              <div>
+                <TextField
+                  type="text"
+                  name="firstName"
+                  label="First Name"
+                  onChange={handleInputChange}
+                  
+                />
+                </div>
+                <div >
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DemoContainer components={["DatePicker"]}>
+                    <DatePicker 
+                      onChange={(newValue) => setValue(newValue)}
+                      label="joining date"
+                    />
+                  </DemoContainer>
+                </LocalizationProvider>
+                </div>
+              </div>
+              <div className={styles.formgroup}>
+                <TextField
+                  name="phoneNumber"
+                  type="number"
+                  label="Phone Number"
+                  onChange={handleInputChange}
+                />
+               
+
+                <TextField
+                  name="emailId"
+                  type="email"
+                  label="Email Id"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <FormControl>
+                  <FormLabel id="demo-row-radio-buttons-group-label">
+                    Gender
+                  </FormLabel>
+                  <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="female"
+                      control={<Radio />}
+                      label="Female"
+                    />
+                    <FormControlLabel
+                      value="male"
+                      control={<Radio />}
+                      label="Male"
+                    />
+                    <FormControlLabel
+                      value="other"
+                      control={<Radio />}
+                      label="Other"
+                    />
+                  </RadioGroup>
+                </FormControl>
+
+                
+              </div>
             </div>
-            <div className={styles.inputBox}>
-              <TextField
-                name="lastName"
-                type="text"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className={styles.inputBox}>
-              <TextField
-                name="phoneNumber"
-                type="number"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className={styles.inputBox}>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DemoContainer
-                  components={["MobileDatePicker", "", "DatePicker"]}
-                >
-                  <DemoItem label="Mobile variant">
-                    <MobileDatePicker defaultValue={dayjs("2022-04-17")} />
-                  </DemoItem>
-                </DemoContainer>
-              </LocalizationProvider>
+            <div className={styles.footer}>
+              <Stack direction="row" spacing={2}>
+                <Button variant="outlined" color="error">
+                  Cancel
+                </Button>
+                <Button type="submit" variant="contained" color="error">
+                  Submit
+                </Button>
+              </Stack>
             </div>
           </div>
-          <button type="submit"> Submit</button>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 };
 

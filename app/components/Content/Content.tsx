@@ -4,11 +4,12 @@ import { inter } from "../../utils/fonts";
 import 'animate.css';
 
 
+
 const ContentPage = () => {
   return (
     <div className={styles.content}>
       <h1 className={`${styles.title} ${inter.className}`}>
-        Welcome to <span> One Life </span>
+      Welcome to <span> One Life </span>
       </h1>
       
       <h4 className={`${styles.subTitle}`}>

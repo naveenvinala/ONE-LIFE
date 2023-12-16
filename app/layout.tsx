@@ -8,7 +8,7 @@ const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
 });
-
+import 'animate.css'
 
 export const metadata: Metadata = {
   title: "One Life Gym",

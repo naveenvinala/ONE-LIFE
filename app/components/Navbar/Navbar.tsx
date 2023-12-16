@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <Image src={onelife} alt="Logo" height={80} width={80} />
+        <Image src={onelife} alt="Logo" height={80} width={100} />
       </div>
       <div className={styles.navigation}>
         <ul>
@@ -23,10 +23,16 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/Photos"> Photos </Link>
+            <Link className={styles.active} href="/Photos">
+              {" "}
+              Photos{" "}
+            </Link>
           </li>
           <li>
-            <Link href="/contact"> Contact </Link>
+            <Link className={styles.active} href="/contact">
+              {" "}
+              Contact{" "}
+            </Link>
           </li>
         </ul>
       </div>

@@ -25,7 +25,7 @@ const HomePage = () => {
             <Button />
           </div>
         </div>
-        <Image
+        {/* <Image
           className={styles.slide}
           src={female}
           alt="Picture of the female"
@@ -39,7 +39,7 @@ const HomePage = () => {
           className={styles.slide}
           src={pushUpsMan}
           alt="Picture of the pushUpsMan"
-        />
+        /> */}
       </div>
     </div>
   );

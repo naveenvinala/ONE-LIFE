@@ -1,11 +1,11 @@
 
 $column-count: 12;
 
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  line-height: calc(1em + 0.5rem);
 }
 
 html,
@@ -16,14 +16,20 @@ body {
   scroll-behavior: smooth;
 
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 img,
 picture,
 video,
 svg{
 display: block;
-max-width: 100%;
-height: auto;
+height: 100%;
+width: 100%;
 -webkit-user-select: none; /* Safari */
 user-select: none;
 }
@@ -34,49 +40,34 @@ a {
 }
 .container{
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border: 1px solid red;
 }
 @media (min-width: 320px) {
-  body{
-    font-size: 12px;
-  }
+
   .container {
    max-width: 320px;
   }
 }
 @media (min-width: 375px) {
-  body{
-    font-size: 14px;
-  }
+
   .container {
    max-width: 375px;
   }
 }
 @media (min-width: 768px) {
-  body{
-    font-size: 14px;
-  }
+  
   .container {
    max-width: 768px;
   }
 }
 @media (min-width: 1024px) {
-  body{
-    font-size: 14px;
-  }
+
   .container {
    max-width: 1024px;
   }
 }
 /* Large screens (desktops) */
 @media (min-width: 1440px) {
-  body {
-    font-size: 16px;
-  }
+ 
   .container {
     max-width: 1440px;
    }

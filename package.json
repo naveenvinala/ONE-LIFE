@@ -18,6 +18,7 @@
     "dayjs": "^1.11.10",
     "next": "latest",
     "react": "latest",
+    "react-animate-style": "^0.1.6",
     "react-dom": "latest",
     "sass": "^1.68.0"
   },

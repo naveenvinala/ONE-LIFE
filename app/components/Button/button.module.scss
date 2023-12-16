@@ -24,16 +24,18 @@
   vertical-align: middle;
   transition: background-color 0.3s;
   animation: pulse 1.5s infinite;
+  margin-left: 2rem;
+  width: 25%;
 }
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(0.95);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1);
+    transform: scale(0.95);
   }
 }
 .button:hover,
@@ -46,3 +48,9 @@
 .button:active {
   opacity: .5;
 }
+
+@media  (width <= 426px) {
+  .button {
+    width: 90%;
+    }
+  }

@@ -4,7 +4,7 @@ import ImageCarousel from "./components/HomePage/HomePage";
 
 export default function Home() {
   return (
-    <><div className="container">
+    <><div className="contain">
       <ImageCarousel />
       </div>
     </>
