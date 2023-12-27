@@ -24,9 +24,8 @@ const TextFields: React.FC<Props> = ({ name, type, label, onChange }) => {
         }
       }
       margin="dense"
-      fullWidth
       label={label}
-      variant="standard"
+      variant="outlined"
     />
   );
 };

@@ -32,18 +32,18 @@ const RegistrationPage = () => {
     phoneNumber: "",
   });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event) => {
     setFormInputs({
       ...formInputs,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleRadioChange = (event) => {
     setSelectedValue(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formInputs);
 
@@ -61,8 +61,6 @@ const RegistrationPage = () => {
           <div className={styles.registerForm}>
             <div className={styles.fields}>
             <div className={styles.formgroup}>
-
-              <div>
                 <TextField
                   type="text"
                   name="firstName"
@@ -70,8 +68,7 @@ const RegistrationPage = () => {
                   onChange={handleInputChange}
                   
                 />
-                </div>
-                <div >
+                
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["DatePicker"]}>
                     <DatePicker 
@@ -81,7 +78,8 @@ const RegistrationPage = () => {
                   </DemoContainer>
                 </LocalizationProvider>
                 </div>
-              </div>
+                
+             
               <div className={styles.formgroup}>
                 <TextField
                   name="phoneNumber"
